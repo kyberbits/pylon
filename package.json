@@ -1,6 +1,6 @@
 {
 	"name": "@kyberbits/pylon",
-	"version": "0.0.5",
+	"version": "0.0.7",
 	"description": "A toolkit for TypeScript applications.",
 	"main": "var/build/index.js",
 	"types": "var/build/index.d.ts",
