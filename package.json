@@ -1,0 +1,27 @@
+{
+	"name": "@kyberbits/pylon",
+	"version": "0.0.5",
+	"description": "A toolkit for TypeScript applications.",
+	"main": "var/build/index.js",
+	"types": "var/build/index.d.ts",
+	"scripts": {
+		"install": "rm -f var/build/* && npm run build",
+		"build": "tsc",
+		"lint": "echo TODO",
+		"test": "echo TODO"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kyberbits/pylon.git"
+	},
+	"keywords": [],
+	"author": "Aaron Ellington",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/kyberbits/pylon/issues"
+	},
+	"homepage": "https://github.com/kyberbits/pylon#readme",
+	"devDependencies": {
+		"typescript": "^5.0.4"
+	}
+}

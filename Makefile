@@ -1,4 +1,4 @@
-.PHONY: full build test lint fix clean
+.PHONY: full build build-npm test test-npm lint lint-npm fix fix-npm clean
 
 SHELL=/bin/bash -o pipefail
 $(shell git config core.hooksPath ops/git-hooks)
@@ -6,16 +6,32 @@ $(shell git config core.hooksPath ops/git-hooks)
 full: clean lint test build
 
 ## Build the project
-build:
+build: build-npm
+
+build-npm:
+	[ -d node_modules ] || npm install
+	npm run build
 
 ## Test the project
-test:
+test: test-npm
+
+test-npm:
+	[ -d node_modules ] || npm install
+	npm run test
 
 ## Lint the project
-lint:
+lint: lint-npm
+
+lint-npm:
+	[ -d node_modules ] || npm install
+	npm run lint
 
 ## Fix the project
-fix:
+fix: fix-npm
+
+fix-npm:
+	[ -d node_modules ] || npm install
+	npm run fix
 
 ## Clean the project
 clean:
